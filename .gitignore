@@ -1,0 +1,68 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Raw data
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed data
+data/processed/*
+!data/processed/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Power BI temporary files
+*.pbix.lock
+*.pbit.lock
+
+# Database dumps
+*.sql.gz
+*.dump
+
+# Internal project context
+Contexto_Projeto_Corporate_Financial_Analytics.txt
+
+# Local profiling reports
+docs/registry_profiling*.txt
+docs/company_identification*.txt
+docs/company_duplicates*.txt
+
+# Python cache
+__pycache__/
+*.pyc
