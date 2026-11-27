@@ -1,0 +1,371 @@
+﻿================================================================================
+CORPORATE FINANCIAL ANALYTICS
+FINANCIAL DATA PROFILING
+================================================================================
+
+Códigos CVM disponíveis:
+<StringArray>
+['001023', '002437', '014451', '026190', '026174', '026069', '027472',
+ '015423', '024880', '020990',
+ ...
+ '001210', '003204', '008133', '006173', '002429', '025950', '025143',
+ '025038', '004693', '021091']
+Length: 443, dtype: str
+
+Ano do arquivo: 2025
+Demonstração: DRE
+
+Registros originais: 31404
+Registros selecionados: 222
+
+================================================================================
+FINANCIAL DATA PROFILING
+================================================================================
+
+Total de registros: 222
+Empresas identificadas:
+<StringArray>
+['004030', '003980', '014320']
+Length: 3, dtype: str
+
+Registros por código CVM:
+CD_CVM
+003980    94
+004030    64
+014320    64
+Name: count, dtype: int64
+
+Valores ausentes:
+CNPJ_CIA         0
+DT_REFER         0
+VERSAO           0
+DENOM_CIA        0
+CD_CVM           0
+GRUPO_DFP        0
+MOEDA            0
+ESCALA_MOEDA     0
+ORDEM_EXERC      0
+DT_INI_EXERC     0
+DT_FIM_EXERC     0
+CD_CONTA         0
+DS_CONTA         0
+VL_CONTA         0
+ST_CONTA_FIXA    0
+dtype: int64
+
+Linhas integralmente duplicadas:
+0
+
+Distribuição: VERSAO
+VERSAO
+1    222
+Name: count, dtype: int64
+
+Distribuição: GRUPO_DFP
+GRUPO_DFP
+DF Consolidado - Demonstração do Resultado    222
+Name: count, dtype: int64
+
+Distribuição: MOEDA
+MOEDA
+REAL    222
+Name: count, dtype: int64
+
+Distribuição: ESCALA_MOEDA
+ESCALA_MOEDA
+MIL    222
+Name: count, dtype: int64
+
+Distribuição: ORDEM_EXERC
+ORDEM_EXERC
+PENÚLTIMO    111
+ÚLTIMO       111
+Name: count, dtype: int64
+
+Distribuição: DT_REFER
+DT_REFER
+2025-12-31    222
+Name: count, dtype: int64
+
+Distribuição: DT_INI_EXERC
+DT_INI_EXERC
+2024-01-01    111
+2025-01-01    111
+Name: count, dtype: int64
+
+Distribuição: DT_FIM_EXERC
+DT_FIM_EXERC
+2024-12-31    111
+2025-12-31    111
+Name: count, dtype: int64
+
+Distribuição: ST_CONTA_FIXA
+ST_CONTA_FIXA
+S    150
+N     72
+Name: count, dtype: int64
+
+Verificação de chave composta
+
+Total de registros: 222
+
+Total de chaves distintas: 222
+
+Duplicidades na chave: 0
+
+Avaliação da distribuição do ST_CONTA_FIXA:
+   CD_CVM ST_CONTA_FIXA  Quantidade
+0  003980             N          44
+1  003980             S          50
+2  004030             N          14
+3  004030             S          50
+4  014320             N          14
+5  014320             S          50
+
+Estrutura das contas contábeis:
+  CD_CONTA                                                                               DS_CONTA ST_CONTA_FIXA
+      3.01                                                 Receita de Venda de Bens e/ou Serviços             S
+      3.02                                                  Custo dos Bens e/ou Serviços Vendidos             S
+      3.03                                                                        Resultado Bruto             S
+      3.04                                                         Despesas/Receitas Operacionais             S
+   3.04.01                                                                    Despesas com Vendas             S
+   3.04.02                                                      Despesas Gerais e Administrativas             S
+   3.04.03                                             Perdas pela Não Recuperabilidade de Ativos             S
+   3.04.04                                                           Outras Receitas Operacionais             S
+   3.04.05                                                           Outras Despesas Operacionais             S
+   3.04.06                                                  Resultado de Equivalência Patrimonial             S
+      3.05                                 Resultado Antes do Resultado Financeiro e dos Tributos             S
+      3.06                                                                   Resultado Financeiro             S
+   3.06.01                                                                   Receitas Financeiras             S
+   3.06.02                                                                   Despesas Financeiras             S
+3.06.02.01                                   Variação Cambial Líquida de Instrumentos Financeiros             N
+3.06.02.02                                                                   Despesas Financeiras             N
+      3.07                                             Resultado Antes dos Tributos sobre o Lucro             S
+      3.08                                   Imposto de Renda e Contribuição Social sobre o Lucro             S
+   3.08.01                                                                               Corrente             S
+   3.08.02                                                                               Diferido             S
+      3.09                                            Resultado Líquido das Operações Continuadas             S
+      3.10                                          Resultado Líquido de Operações Descontinuadas             S
+   3.10.01                                    Lucro/Prejuízo Líquido das Operações Descontinuadas             S
+   3.10.02                        Ganhos/Perdas Líquidas sobre Ativos de Operações Descontinuadas             S
+      3.11                                                  Lucro/Prejuízo Consolidado do Período             S
+   3.11.01                                             Atribuído a Sócios da Empresa Controladora             S
+   3.11.02                                                   Atribuído a Sócios Não Controladores             S
+      3.99                                                        Lucro por Ação - (Reais / Ação)             N
+   3.99.01                                                                  Lucro Básico por Ação             N
+3.99.01.01                                                                                     ON             N
+   3.99.02                                                                 Lucro Diluído por Ação             N
+3.99.02.01                                                                                     ON             N
+3.04.04.01                                                           Outras Receitas Operacionais             N
+3.04.04.02                                     Recuperação de empréstimos compulsórios Eletrobras             N
+3.04.04.03                                 Ganhos pela não recuperabilidade de ativos financeiros             N
+3.04.05.01                                                           Outras Despesas Operacionais             N
+3.04.05.02 Ganhos e perdas em ativos mantidos para venda e vendas de participações em controladas             N
+3.04.05.03                      (Perdas) Reversão pela não recuperabilidade de ativos financeiros             N
+3.04.05.04               Resultado em operações com controlada e empresas controladas em conjunto             N
+3.06.01.01                                                                   Receitas Financeiras             N
+3.06.01.02                                                    Atualização de créditos tributários             N
+3.06.01.03                                                              Variação cambial, líquida             N
+3.06.01.04                                           Ganhos com instrumentos financeiros, líquido             N
+3.06.02.01                                                                   Despesas Financeiras             N
+3.06.02.02                                                              Variação cambial, líquida             N
+3.06.02.03                                           Perdas com instrumentos financeiros, líquido             N
+3.06.02.04                                                          Despesas na recompra de Bonds             N
+3.99.01.02                                                                                     PN             N
+3.99.02.02                                                                                     PN             N
+
+Distribuição por nível hierárquico e tipo de conta:
+   NIVEL_CONTA ST_CONTA_FIXA  Quantidade
+0            2             N           6
+1            2             S          66
+2            3             N          12
+3            3             S          84
+4            4             N          54
+
+Verificação de valores numericos
+
+Total de registros: 222
+
+Valores numericamente válidos:
+222
+
+Valores numericamente inválidos ou ausentes:
+0
+
+Análise dos valores monetários:
+
+Tipo de dado: float64
+
+Valores negativos: 92
+
+Valores iguais a zero: 58
+
+Valores com parte fracionária: 20
+
+Investigação dos valores fracionários:
+CD_CVM   CD_CONTA DS_CONTA      VL_CONTA ESCALA_MOEDA
+004030 3.99.01.01       ON -1.9545000000          MIL
+004030 3.99.01.01       ON -1.5099800000          MIL
+004030 3.99.02.01       ON -1.9545000000          MIL
+004030 3.99.02.01       ON -1.5099800000          MIL
+003980 3.99.01.01       ON  2.1800000000          MIL
+003980 3.99.01.01       ON  0.6900000000          MIL
+003980 3.99.01.02       PN  2.1800000000          MIL
+003980 3.99.01.02       PN  0.6900000000          MIL
+003980 3.99.02.01       ON  2.1800000000          MIL
+003980 3.99.02.01       ON  0.6900000000          MIL
+003980 3.99.02.02       PN  2.1800000000          MIL
+003980 3.99.02.02       PN  0.6900000000          MIL
+014320 3.99.01.01       ON -0.1200000000          MIL
+014320 3.99.01.01       ON -2.5000000000          MIL
+014320 3.99.01.02       PN -0.1200000000          MIL
+014320 3.99.01.02       PN -2.5000000000          MIL
+014320 3.99.02.01       ON -0.1200000000          MIL
+014320 3.99.02.01       ON -2.5000000000          MIL
+014320 3.99.02.02       PN -0.1200000000          MIL
+014320 3.99.02.02       PN -2.5000000000          MIL
+
+Investigação das contas de lucro por ação:
+CD_CVM   CD_CONTA                        DS_CONTA      VL_CONTA ESCALA_MOEDA
+004030       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+004030       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+004030    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+004030    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+004030 3.99.01.01                              ON -1.9545000000          MIL
+004030 3.99.01.01                              ON -1.5099800000          MIL
+004030    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+004030    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+004030 3.99.02.01                              ON -1.9545000000          MIL
+004030 3.99.02.01                              ON -1.5099800000          MIL
+003980       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+003980       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+003980    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+003980    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+003980 3.99.01.01                              ON  2.1800000000          MIL
+003980 3.99.01.01                              ON  0.6900000000          MIL
+003980 3.99.01.02                              PN  2.1800000000          MIL
+003980 3.99.01.02                              PN  0.6900000000          MIL
+003980    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+003980    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+003980 3.99.02.01                              ON  2.1800000000          MIL
+003980 3.99.02.01                              ON  0.6900000000          MIL
+003980 3.99.02.02                              PN  2.1800000000          MIL
+003980 3.99.02.02                              PN  0.6900000000          MIL
+014320       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+014320       3.99 Lucro por Ação - (Reais / Ação)  0.0000000000          MIL
+014320    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+014320    3.99.01           Lucro Básico por Ação  0.0000000000          MIL
+014320 3.99.01.01                              ON -0.1200000000          MIL
+014320 3.99.01.01                              ON -2.5000000000          MIL
+014320 3.99.01.02                              PN -0.1200000000          MIL
+014320 3.99.01.02                              PN -2.5000000000          MIL
+014320    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+014320    3.99.02          Lucro Diluído por Ação  0.0000000000          MIL
+014320 3.99.02.01                              ON -0.1200000000          MIL
+014320 3.99.02.01                              ON -2.5000000000          MIL
+014320 3.99.02.02                              PN -0.1200000000          MIL
+014320 3.99.02.02                              PN -2.5000000000          MIL
+
+Total de registros de lucro por ação: 38
+
+Distribuição por empresa:
+CD_CVM
+003980    14
+014320    14
+004030    10
+Name: count, dtype: int64
+
+Investigação da precisão decimal:
+
+Distribuição das casas decimais:
+VL_CONTA
+10    222
+Name: count, dtype: int64
+
+Máximo de casas decimais: 10
+
+Validação das relações contábeis da DRE:
+
+Validação: Lucro bruto
+                                                              Calculado            Informado Diferenca  Aprovado
+CD_CVM DT_REFER   VERSAO DT_INI_EXERC DT_FIM_EXERC                                                              
+003980 2025-12-31 1      2024-01-01   2024-12-31     9203240.0000000000   9203240.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     7967493.0000000000   7967493.0000000000     0E-10      True
+004030 2025-12-31 1      2024-01-01   2024-12-31    11696764.0000000000  11696764.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    12393725.0000000000  12393725.0000000000     0E-10      True
+014320 2025-12-31 1      2024-01-01   2024-12-31     1659936.0000000000   1659936.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     2183929.0000000000   2183929.0000000000     0E-10      True
+
+Aprovadas: 6
+Reprovadas: 0
+Sem dados suficientes: 0
+
+Validação: EBIT
+                                                              Calculado            Informado Diferenca  Aprovado
+CD_CVM DT_REFER   VERSAO DT_INI_EXERC DT_FIM_EXERC                                                              
+003980 2025-12-31 1      2024-01-01   2024-12-31     7487202.0000000000   7487202.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     3739068.0000000000   3739068.0000000000     0E-10      True
+004030 2025-12-31 1      2024-01-01   2024-12-31     4270022.0000000000   4270022.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     4816674.0000000000   4816674.0000000000     0E-10      True
+014320 2025-12-31 1      2024-01-01   2024-12-31      499576.0000000000    499576.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -1363886.0000000000  -1363886.0000000000     0E-10      True
+
+Aprovadas: 6
+Reprovadas: 0
+Sem dados suficientes: 0
+
+Validação: Resultado antes dos tributos
+                                                              Calculado            Informado Diferenca  Aprovado
+CD_CVM DT_REFER   VERSAO DT_INI_EXERC DT_FIM_EXERC                                                              
+003980 2025-12-31 1      2024-01-01   2024-12-31     5463715.0000000000   5463715.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     2524447.0000000000   2524447.0000000000     0E-10      True
+004030 2025-12-31 1      2024-01-01   2024-12-31    -1543349.0000000000  -1543349.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -1679518.0000000000  -1679518.0000000000     0E-10      True
+014320 2025-12-31 1      2024-01-01   2024-12-31      -95584.0000000000    -95584.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -1480755.0000000000  -1480755.0000000000     0E-10      True
+
+Aprovadas: 6
+Reprovadas: 0
+Sem dados suficientes: 0
+
+Validação: Resultado das operações continuadas
+                                                              Calculado            Informado Diferenca  Aprovado
+CD_CVM DT_REFER   VERSAO DT_INI_EXERC DT_FIM_EXERC                                                              
+003980 2025-12-31 1      2024-01-01   2024-12-31     4599062.0000000000   4599062.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     1418438.0000000000   1418438.0000000000     0E-10      True
+004030 2025-12-31 1      2024-01-01   2024-12-31    -1538141.0000000000  -1538141.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -1506726.0000000000  -1506726.0000000000     0E-10      True
+014320 2025-12-31 1      2024-01-01   2024-12-31        3362.0000000000      3362.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -2910034.0000000000  -2910034.0000000000     0E-10      True
+
+Aprovadas: 6
+Reprovadas: 0
+Sem dados suficientes: 0
+
+Validação: Lucro líquido consolidado
+                                                              Calculado            Informado Diferenca  Aprovado
+CD_CVM DT_REFER   VERSAO DT_INI_EXERC DT_FIM_EXERC                                                              
+003980 2025-12-31 1      2024-01-01   2024-12-31     4599062.0000000000   4599062.0000000000     0E-10      True
+                         2025-01-01   2025-12-31     1418438.0000000000   1418438.0000000000     0E-10      True
+004030 2025-12-31 1      2024-01-01   2024-12-31    -1538141.0000000000  -1538141.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -1506726.0000000000  -1506726.0000000000     0E-10      True
+014320 2025-12-31 1      2024-01-01   2024-12-31        3362.0000000000      3362.0000000000     0E-10      True
+                         2025-01-01   2025-12-31    -2910034.0000000000  -2910034.0000000000     0E-10      True
+
+Aprovadas: 6
+Reprovadas: 0
+Sem dados suficientes: 0
+
+================================================================================
+RESUMO DAS VALIDAÇÕES CONTÁBEIS
+================================================================================
+
+Total de validações: 30
+Validações aprovadas: 30
+Validações reprovadas: 0
+Validações sem dados: 0
+Taxa de aprovação: 100.00%
+
+================================================================================
+Profiling financeiro inicial finalizado.
+================================================================================
